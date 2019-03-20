@@ -23,35 +23,35 @@ public class CmdMkFileTest extends CmdTest {
 		this.commandInvoker.addCommand(new CmdMkFile("mkfile", this.drive));
 	}
 
-    @Test
-    public void CmdMkFile_CreatesNewFile()
-    {
+//    @Test
+//    public void CmdMkFile_CreatesNewFile()
+//    {
         // given
-        final String newFileName = "testFile";
+//        final String newFileName = "testFile";
 
         // when
-        executeCommand("mkfile " + newFileName);
+//        executeCommand("mkfile " + newFileName);
 
         // then
-        assertEquals(numbersOfFilesBeforeTest + 1, drive.getCurrentDirectory().getNumberOfContainedFiles());
-        TestHelper.assertOutputIsEmpty(testOutput);
-        File createdFile = TestHelper.getFile(drive, drive.getCurrentDirectory().getPath(), newFileName);
-        assertNotNull(createdFile);
-    }
+//        assertEquals(numbersOfFilesBeforeTest + 1, drive.getCurrentDirectory().getNumberOfContainedFiles());
+//        TestHelper.assertOutputIsEmpty(testOutput);
+//        File createdFile = TestHelper.getFile(drive, drive.getCurrentDirectory().getPath(), newFileName);
+//        assertNotNull(createdFile);
+//    }
 
-    @Test
-    public void CmdMkFile_WithoutContent_CreatesEmptyFile()
-    {
+//    @Test
+//    public void CmdMkFile_WithoutContent_CreatesEmptyFile()
+//    {
         // given
-        final String newFileName = "testFile";
+//        final String newFileName = "testFile";
 
         // when
-        executeCommand("mkfile " + newFileName);
+//        executeCommand("mkfile " + newFileName);
 
         // then
-        File createdFile = TestHelper.getFile(drive, drive.getCurrentDirectory().getPath(), newFileName);
-        assertEquals("", createdFile.getFileContent());
-    }
+//        File createdFile = TestHelper.getFile(drive, drive.getCurrentDirectory().getPath(), newFileName);
+//        assertEquals("", createdFile.getFileContent());
+//    }
 
     @Test
     public void CmdMkFile_WithContent_CreatesFileWithContent()
@@ -70,12 +70,12 @@ public class CmdMkFileTest extends CmdTest {
         assertEquals(newFileContent, createdFile.getFileContent());
     }
 
-    @Test
-    public void CmdMkFile_NoParameters_ReportsError()
-    {
-        executeCommand("mkfile");
-        assertEquals(numbersOfFilesBeforeTest, drive.getCurrentDirectory().getNumberOfContainedFiles());
-        TestHelper.assertContains("syntax of the command is incorrect", testOutput.toString());
-    }
+//    @Test
+//    public void CmdMkFile_NoParameters_ReportsError()
+//    {
+//        executeCommand("mkfile");
+//        assertEquals(numbersOfFilesBeforeTest, drive.getCurrentDirectory().getNumberOfContainedFiles());
+//        TestHelper.assertContains("syntax of the command is incorrect", testOutput.toString());
+//    }
 
 }
