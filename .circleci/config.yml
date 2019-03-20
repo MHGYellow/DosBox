@@ -8,5 +8,4 @@ jobs:
     steps:
       - checkout
       - run : mvn test
-      - codecov/upload:
-          file: {{ coverage_report_filepath }}
+      - run: curl -s https://codecov.io/bash | bash
