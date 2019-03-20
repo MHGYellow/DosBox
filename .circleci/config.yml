@@ -9,4 +9,4 @@ jobs:
       - checkout
       - run : mvn test
       - store_artifacts:
-          path: target
+          path: DosBox
